@@ -20,7 +20,7 @@ class DataPersistsController {
         if ($request->isGet()) {
             
             $params = $request->getQueryParams();
-            $Data = new Data();
+            $Data = new \Data();
 
             $data = array('message' => 'Sucess!', 'code' => 1);
             if (!$Data->insertData($params)) {
