@@ -12,12 +12,12 @@ class DataSource {
     private function __construct() {
 
 
-        $servername = @$_ENV['DB_APP_HOST'];
-        $username = @$_ENV['DB_APP_USER'];
-        $password = @$_ENV['DB_APP_PASSWORD'];
+        $servername = !empty($_ENV['DB_APP_HOST']) ? $_ENV['DB_APP_HOST'] : null;
+        $username = !empty($_ENV['DB_APP_USER']) ? $_ENV['DB_APP_USER'] : null;
+        $password = !empty($_ENV['DB_APP_PASSWORD']) ? $_ENV['DB_APP_PASSWORD'] : null;
 
-        $bd = @$_ENV['DB_APP_DATABASE'];
-        $port = @$_ENV['DB_APP_PORT'];
+        $bd = !empty($_ENV['DB_APP_DATABASE']) ? $_ENV['DB_APP_DATABASE'] : null;
+        $port = !empty($_ENV['DB_APP_PORT']) ? $_ENV['DB_APP_PORT'] : null;
 
         $flags = array(
             PDO::ATTR_PERSISTENT => false,
@@ -29,7 +29,7 @@ class DataSource {
         }
 
         try {
-            $this->DB = new PDO(
+            $this->DB = new \PDO(
                     "pgsql:host={$servername};port={$port};dbname={$bd};sslmode=allow",
                     $username,
                     $password,
