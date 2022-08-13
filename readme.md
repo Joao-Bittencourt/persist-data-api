@@ -1,2 +1,0 @@
-[![CI](https://github.com/Joao-Bittencourt/notificationService/actions/workflows/ci.yml/badge.svg)](https://github.com/Joao-Bittencourt/notificationService/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/Joao-Bittencourt/notificationService/branch/master/graph/badge.svg?token=NAHFTZMU40)](https://codecov.io/gh/Joao-Bittencourt/notificationService)

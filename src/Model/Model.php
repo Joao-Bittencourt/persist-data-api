@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace persistDataApi\model;
+namespace persistDataApi\Model;
 
 use persistDataApi\Config\DataSource;
 

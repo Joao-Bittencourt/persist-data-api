@@ -1,6 +1,6 @@
 <?php
 
-namespace persistDataApi\model;
+namespace persistDataApi\Model;
 
 use PDO;
 
